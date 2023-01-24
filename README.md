@@ -4,6 +4,16 @@ Função utilitária para colocar as primeiras letras de um texto em upperCase.
 ## Código
 
 ```js
+export const capitalize = text => {
+  if (!text) return undefined;
+  return text
+    .split(" ")
+    .map(word => (word.length === 2 ? word : word[0].toUpperCase() + word.slice(1)))
+    .join(" ");
+};
+```
+
+<!--```js
 export const captalize = (text) => {
   if(!text) return undefined;
   var result = '';
@@ -14,4 +24,4 @@ export const captalize = (text) => {
   });
   return result.trim();
 }
-```
+```-->
