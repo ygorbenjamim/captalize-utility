@@ -1,7 +1,5 @@
-export const capitalize = text => {
-  if (!text) return undefined;
-  return text
-    .split(" ")
-    .map(word => (word.length === 2 ? word : word[0].toUpperCase() + word.slice(1)))
-    .join(" ");
-};
+export const toCaptalize = (text) => {
+  if(!text) return undefined;
+  const words = text.split(' ');
+  return words.map(word => word.length == 2 ? word : word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+}
